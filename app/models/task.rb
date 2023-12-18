@@ -12,6 +12,7 @@
 #
 class Task < ApplicationRecord
   belongs_to :category
+  belongs_to :user
   
   validate :due_date_validity
   validates :name, :description, presence: true
