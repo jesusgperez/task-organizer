@@ -13,10 +13,14 @@
 class Task < ApplicationRecord
   belongs_to :category
   belongs_to :user
-  
-  validate :due_date_validity
-  validates :name, :description, presence: true
+  has_many :participating_users, class_name: 'Participant'
+  has_many :participants, through: :participating_users, source: :user
+
+  validates :name, :description, :participating_users,  presence: true
   validates :name, uniqueness: { case_sensitive: false }
+
+  # Custom validations
+  validate :due_date_validity
 
   def due_date_validity
     return if due_date.blank?
