@@ -28,3 +28,7 @@ rails g simple_form:install --bootstrap
 rails g scaffold Category name:string description:text
 rails db:create
 rails db:migrate
+
+
+# Important Gems
+gem 'annotate': This gem will declare explicitly the model attributes into the model file (as comments)
