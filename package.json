@@ -4,6 +4,11 @@
     "cocoon": "^0.1.1",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
-    "roboto-fontface": "^0.10.0"
+    "roboto-fontface": "^0.10.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3"
   }
 }

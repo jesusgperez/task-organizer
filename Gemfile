@@ -37,7 +37,11 @@ gem "rails-i18n"
 
 gem "devise"
 
+gem "webpacker"
+
 gem 'cocoon'
+
+gem 'cancancan'
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
