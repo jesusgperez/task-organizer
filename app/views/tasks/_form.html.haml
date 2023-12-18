@@ -8,6 +8,9 @@
     = f.input :description, label: t('tasks.description')
     = f.input :due_date, label: t('tasks.due_date')
     = f.association :category, label: t('tasks.category')
+    .participants
+      = f.simple_fields_for :participating_users do |g|
+        = render 'participating_users_fields', f: g
 
   .form-actions
     = f.button :submit
