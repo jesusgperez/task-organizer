@@ -25,3 +25,4 @@ Things you may want to cover:
 
 # Important commands
 rails g simple_form:install --bootstrap    
+rails g scaffold Category name:string description:text
