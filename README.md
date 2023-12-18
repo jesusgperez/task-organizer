@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Important commands
+rails g simple_form:install --bootstrap    
