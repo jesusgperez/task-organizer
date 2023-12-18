@@ -16,6 +16,9 @@ es:
   common:
     back: Atrás
   hello: Hello world
+  task:
+    errors:
+      invalid_due_date: Fecha límite inválida
   tasks:
     category: Categoría
     description: Descripción
