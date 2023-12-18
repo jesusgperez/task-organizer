@@ -25,7 +25,7 @@ development:
   <<: *default
   database: task_organizer_development
   host: 127.0.0.1
-  user: postgres
+  user: <%= Rails.application.credentials.db_user %>
   password: <%= Rails.application.credentials.db_password %>
 
   # The specified database role being used to connect to postgres.
@@ -62,8 +62,8 @@ test:
   <<: *default
   database: task_organizer_test
   host: 127.0.0.1
-  user: postgres
-  password: ENV["DB_PASSWORD"]
+  user: <%= Rails.application.credentials.db_user %>
+  password: <%= Rails.application.credentials.db_password %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
