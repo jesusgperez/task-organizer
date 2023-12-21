@@ -13,7 +13,7 @@
         Agregar participante
     .participants
       = f.simple_fields_for :participating_users do |g|
-        = render 'participating_user_fields', f: g
+        = render 'tasks/participating_user_fields', f: g
       .participants-container
 
   .form-actions

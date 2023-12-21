@@ -2,5 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "cocoon"
-require('jquery')
-require('jquery_ujs')
+//= require jquery
+//= require jquery_ujs
