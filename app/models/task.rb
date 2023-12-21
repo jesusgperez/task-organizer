@@ -9,12 +9,15 @@
 #  category_id :bigint           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :bigint           not null
+#  code        :string
 #
 class Task < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :participating_users, class_name: 'Participant'
   has_many :participants, through: :participating_users, source: :user
+  has_many :notes
 
   validates :name, :description, :participating_users,  presence: true
   validates :name, uniqueness: { case_sensitive: false }
