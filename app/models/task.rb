@@ -13,22 +13,25 @@
 #  code        :string
 #
 class Task < ApplicationRecord
+  # Relationships
   belongs_to :category
   belongs_to :user
   has_many :participating_users, class_name: 'Participant'
   has_many :participants, through: :participating_users, source: :user
   has_many :notes
 
+  # Vaidations
   validates :name, :description, :participating_users,  presence: true
   validates :name, uniqueness: { case_sensitive: false }
 
-  # Custom validations
+  ## Custom validations
   validate :due_date_validity
 
-  # Callback
+  # Callbacks (signals)
   before_create :create_code
   after_create :send_email
 
+  # Nested attributes when creating an object
   accepts_nested_attributes_for :participating_users, allow_destroy: true
 
   def due_date_validity
